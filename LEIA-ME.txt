@@ -1,0 +1,6 @@
+Portfólio do Mattis
+
+GitHub Pages: suba a pasta inteira num repositório e ative Settings > Pages.
+Netlify: arraste a pasta (ou o zip) em app.netlify.com/drop.
+
+Mantenha index.html e a pasta imagens juntos.

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mattis — Portfólio</title>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0b0b0d;--bone:#f2ece1;--hair:#e8602c;--wine:#5a0f1e;--grey:#8d8f96;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--bone);font:400 17px/1.65 Figtree,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Gloock,Georgia,serif;font-weight:400;line-height:1}
+:focus-visible{outline:3px solid var(--hair);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+nav{position:absolute;z-index:5;top:0;left:0;right:0;display:flex;justify-content:space-between;padding:20px 24px;font-weight:600}
+nav a{color:inherit;text-decoration:none;margin-left:22px}
+nav a:hover{color:var(--hair)}
+.hero{position:relative;height:100vh;min-height:620px;overflow:hidden;background:radial-gradient(circle at 60% 45%,#2a2a30,var(--ink) 65%)}
+.hero .horns{position:absolute;width:min(70vw,620px);left:50%;top:50%;transform:translate(-50%,-50%) rotate(-8deg);opacity:.12}
+.hero h1{position:absolute;left:0;right:0;top:12%;text-align:center;font-size:clamp(92px,26vw,380px);letter-spacing:-.03em;color:var(--bone);z-index:1}
+.hero .c{position:absolute;z-index:2;left:50%;bottom:6%;height:80%;transform:translateX(-50%);object-fit:contain;filter:drop-shadow(0 25px 40px #000b)}
+.hero .intro{position:absolute;z-index:3;left:24px;bottom:12%;max-width:230px;font-size:15px}
+.hero .intro b{color:var(--hair)}
+.hero .hint{position:absolute;z-index:3;right:24px;bottom:12%;font-size:14px;color:var(--grey);text-align:right;max-width:170px}
+.band{position:absolute;z-index:4;left:0;right:0;bottom:0;background:var(--hair);color:var(--ink);overflow:hidden;white-space:nowrap;font:400 22px/1 Gloock,serif;padding:14px 0;transform:rotate(-1.2deg) scale(1.03)}
+.band span{display:inline-block;padding-right:2rem}
+@media(prefers-reduced-motion:no-preference){.band span{animation:mq 22s linear infinite}@keyframes mq{to{transform:translateX(-100%)}}.hero .c{animation:up .9s ease-out both}@keyframes up{from{opacity:0;transform:translate(-50%,50px)}}}
+.splat{position:absolute;z-index:1;pointer-events:none;width:200px;height:200px;margin:-100px 0 0 -100px}
+@media(prefers-reduced-motion:no-preference){.splat{animation:pop .35s cubic-bezier(.2,1.6,.4,1) both}@keyframes pop{from{transform:scale(0)}}}
+.paper{background:var(--bone);color:var(--ink);padding:100px 0;position:relative;overflow:hidden}
+.about{display:grid;grid-template-columns:minmax(0,340px) 1fr;gap:50px;align-items:end}
+.about img{width:100%;max-height:560px;object-fit:contain;transform:rotate(3deg)}
+h2{font-size:clamp(40px,7vw,80px);margin-bottom:28px}
+.about p{max-width:58ch;margin-bottom:16px}
+.about q{display:block;font:400 clamp(24px,3.4vw,38px)/1.15 Gloock,serif;margin:6px 0 22px;color:var(--wine)}
+.stamps{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.stamps span{border:2px solid var(--ink);padding:6px 16px;font-weight:600;border-radius:4px;transform:rotate(-2deg)}
+.stamps span:nth-child(even){transform:rotate(2deg);background:var(--ink);color:var(--bone)}
+.gal{padding:100px 0}
+.gal h2{text-align:center}
+.plate{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;margin:0 auto 70px;max-width:1120px;padding:0 22px}
+.plate.rev .stage{order:2}
+.stage{position:relative;border-radius:28px;min-height:460px;display:grid;place-items:center;overflow:hidden;padding:40px 20px}
+.phone{width:250px;border:9px solid #111;border-radius:34px;overflow:hidden;box-shadow:0 30px 50px #0008;transform:rotate(-4deg);background:#111}
+.rev .phone{transform:rotate(4deg)}
+.phone img,.win img{display:block;width:100%}
+.win{width:min(92%,560px);border-radius:12px;overflow:hidden;box-shadow:0 30px 50px #0008;transform:rotate(2deg);background:#222}
+.win i{display:block;height:26px;background:#2b2b30;position:relative}
+.win i:before{content:"";position:absolute;left:12px;top:9px;width:8px;height:8px;border-radius:50%;background:#e8602c;box-shadow:14px 0 #e8b82c,28px 0 #5ac85a}
+.txt h3{font-size:clamp(34px,5vw,56px);margin-bottom:14px}
+.txt p{max-width:44ch;opacity:.9}
+.txt em{display:inline-block;margin-top:16px;font-style:normal;font-weight:600;color:var(--hair)}
+.receipt{background:#fbf8f0;color:#222;font:15px/1.8 "Courier New",monospace;width:min(300px,86%);padding:26px 22px;transform:rotate(-2deg);box-shadow:0 30px 50px #0008;clip-path:polygon(0 0,100% 0,100% 97%,95% 100%,90% 97%,85% 100%,80% 97%,75% 100%,70% 97%,65% 100%,60% 97%,55% 100%,50% 97%,45% 100%,40% 97%,35% 100%,30% 97%,25% 100%,20% 97%,15% 100%,10% 97%,5% 100%,0 97%)}
+.receipt b{display:block;text-align:center;font-size:20px}
+.receipt div{display:flex;justify-content:space-between}
+.end{text-align:center;padding:110px 0 70px;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 110%,var(--wine),var(--ink) 65%)}
+.end img{width:150px;margin-bottom:16px}
+.end p{max-width:46ch;margin:0 auto}
+footer{text-align:center;padding:20px;font-size:14px;color:var(--grey)}
+@media(max-width:820px){.about,.plate{grid-template-columns:1fr}.plate.rev .stage{order:0}.about img{max-height:380px;margin:0 auto}.hero .intro,.hero .hint{display:none}.stage{min-height:420px}}
+</style>
+</head>
+<body>
+<header class="hero" id="hero">
+<nav><b>Mattis</b><span><a href="#sobre">sobre</a><a href="#obras">obras</a><a href="#fim">contato</a></span></nav>
+<img class="horns" src="imagens/chifres.webp" alt="">
+<h1>Mattis</h1>
+<img class="c" src="imagens/personagem-1.webp" alt="Personagem de Miraculous com chifres e pincel">
+<p class="intro"><b>Victor Gabriel</b>, 23 anos. Desenvolvedor em formação que pinta sites, sistemas e jogos com código.</p>
+<p class="hint">Toque na tela para jogar tinta</p>
+<div class="band" aria-hidden="true"><span>WEB ✦ JOGOS ✦ SISTEMAS ✦ RPG TEXTUAL ✦ MIRACULOUS ✦ WEB ✦ JOGOS ✦ SISTEMAS ✦ RPG TEXTUAL ✦ MIRACULOUS ✦</span></div>
+</header>
+
+<section class="paper" id="sobre"><div class="wrap about">
+<img src="imagens/personagem-2.webp" alt="Personagem em pose com o pincel">
+<div>
+<h2>O artista por trás do código</h2>
+<q>Cada projeto é uma tela em branco.</q>
+<p>Sou <strong>Victor Gabriel</strong>, mas todo mundo me conhece como <strong>Mattis</strong>. Estou cursando Análise e Desenvolvimento de Sistemas e gosto de criar coisas que as pessoas usam de verdade: sistemas de venda, comunidades e jogos.</p>
+<p>Sou apaixonado pelo universo de Miraculous. Este portfólio usa um dos meus personagens favoritos, com seus chifres, seu pincel e suas manchas de tinta.</p>
+<div class="stamps"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>C#</span><span>C++</span><span>C</span><span>Godot</span></div>
+</div></div></section>
+
+<section class="gal" id="obras"><h2>Obras</h2>
+
+<article class="plate"><div class="stage" style="background:#2a1250"><div class="phone"><img src="imagens/chaotic.webp" alt="Site Chaotic" loading="lazy"></div></div>
+<div class="txt"><h3>Chaotic</h3><p>Site de um RPG textual ambientado em Miraculous. Conta a história da nova geração de portadores e apresenta personagens e equipe.</p><em>HTML · CSS · JavaScript</em></div></article>
+
+<article class="plate rev"><div class="stage" style="background:#4a0b15"><div class="phone"><img src="imagens/coven.webp" alt="Rede social COVEN" loading="lazy"></div></div>
+<div class="txt"><h3>COVEN</h3><p>Rede social para RPG textual. Cada pessoa publica como o seu personagem, com stories, busca e perfis.</p><em>HTML · CSS · JavaScript</em></div></article>
+
+<article class="plate"><div class="stage" style="background:#1b3d3a"><div class="win"><i></i><img src="imagens/plataforma-3d.webp" alt="Protótipo de jogo de plataforma 3D" loading="lazy"></div></div>
+<div class="txt"><h3>Plataforma 3D</h3><p>Protótipo de jogo de plataforma feito na Godot. A personagem corre, pula entre blocos e coleta diamantes, com controles de toque.</p><em>Godot · protótipo</em></div></article>
+
+<article class="plate rev"><div class="stage" style="background:#2c2c32"><div class="receipt"><b>VENAS</b><div><span>Balcão</span><span>ok</span></div><div><span>Produtos</span><span>ok</span></div><div><span>Estoque</span><span>ok</span></div><div><span>Fiados</span><span>ok</span></div><div><span>Relatórios</span><span>ok</span></div><div><span>Impressão</span><span>ok</span></div></div></div>
+<div class="txt"><h3>Venas</h3><p>Sistema de vendas em desenvolvimento, com balcão, cadastro de produtos, controle de estoque, fiados, relatórios e impressão de comprovantes.</p><em>Em desenvolvimento</em></div></article>
+
+<article class="plate"><div class="stage" style="background:#0e5a63"><div class="phone"><img src="imagens/convite-tropical.webp" alt="Convite de aniversário" loading="lazy"></div></div>
+<div class="txt"><h3>Convite tropical</h3><p>Site de convite de aniversário com tema do Stitch, contagem regressiva, música e o mapa da festa.</p><em>Sites de convites</em></div></article>
+
+<article class="plate rev"><div class="stage" style="background:#8c3a58"><div class="phone"><img src="imagens/cha-de-fraldas.webp" alt="Convite de chá de fraldas" loading="lazy"></div></div>
+<div class="txt"><h3>Chá de fraldas</h3><p>Convite digital com botão de confirmação de presença, data, local e um visual delicado.</p><em>Sites de convites</em></div></article>
+</section>
+
+<section class="end" id="fim"><div class="wrap">
+<img src="imagens/cereja.webp" alt="">
+<h2>Vamos pintar algo juntos?</h2>
+<p>Tem uma ideia de site, sistema ou jogo? Me conta que eu transformo em projeto.</p>
+</div></section>
+<footer>© Mattis · Victor Gabriel</footer>
+
+<script>
+(function(){
+var h=document.getElementById('hero'),cols=['#f2ece1','#e8602c','#f2ece1','#8a1426'];
+function splat(x,y,c){
+var s='<svg class="splat" viewBox="-100 -100 200 200" style="left:'+x+'px;top:'+y+'px"><g fill="'+c+'"><circle r="'+(30+Math.random()*14)+'"/>';
+for(var i=0;i<9;i++){var a=Math.random()*6.28,d=40+Math.random()*50,r=3+Math.random()*11;s+='<circle cx="'+Math.cos(a)*d+'" cy="'+Math.sin(a)*d+'" r="'+r+'"/>';}
+h.insertAdjacentHTML('beforeend',s+'</g></svg>');
+var all=h.querySelectorAll('.splat');if(all.length>14)all[0].remove();}
+h.addEventListener('pointerdown',function(e){var b=h.getBoundingClientRect();splat(e.clientX-b.left,e.clientY-b.top,cols[Math.floor(Math.random()*4)]);});
+var w=h.clientWidth,H=h.clientHeight;[[.12,.2,0],[.88,.3,1],[.2,.72,3],[.82,.68,2]].forEach(function(p){splat(w*p[0],H*p[1],cols[p[2]]);});
+})();
+</script>
+</body>
+</html>
